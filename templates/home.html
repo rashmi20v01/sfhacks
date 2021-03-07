@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="/static/home.css" rel='stylesheet'>
+  <title>Home</title>
+</head>
+
+<body>
+  <h1>Welcome!</h1>
+  <p>Select the courses which you want to take:</p>
+  <form method="POST">
+    {% csrf_token %}
+    <div class='mb-3'>
+      <input type='checkbox' name='ch203' value='ch203' id='checkbox1'>
+      <label for='checkbox1'>Transport phenomena</label>
+    </div>
+    <div class='mb-3'>
+      <input type='checkbox' name='ch201' value='ch201' id='checkbox2'>
+      <label for='checkbox2'>Particle technology</label>
+    </div>
+    <div class='mb-3'>
+      <input type='checkbox' name='oc' value='oc' id='checkbox3'>
+      <label for='checkbox3'>Organic Chemistry</label>
+    </div>
+    <div class='mb-3'>
+      <input type='checkbox' name='ma207' value='ma207' id='checkbox4'>
+      <label for='checkbox4'>Numerical Methods</label>
+    </div>
+    <div class='mb-3'>
+      <input type='checkbox' name='ch202' value='ch202' id='checkbox5'>
+      <label for='checkbox5'>Thermodynamics</label>
+    </div>
+    <button type="submit" class='btn btn-success'>GO</button>
+  </form>
+</body>
+
+</html>
